@@ -1,9 +1,9 @@
 class Hash
   def keys_of(*arguments)
     array = []
-    self.each do |animal, location|
-      arguments.each do |i|
-        if i == location
+    arguments.each do |arg|
+      self.each do |key, value|
+        if arg == value
           array.push(key)
         end
       end
